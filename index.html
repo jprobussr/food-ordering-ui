@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Ordering App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="location">
+          <p class="greeting">Deliver to</p>
+          <h1 class="location-name">Murray, Kentucky</h1>
+        </div>
+
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </header>
+
+      <main class="main-content">
+        <section class="hero-section">
+          <h2>Find Your Favorite Food</h2>
+          <p>Fresh meals, fast delivery, and simple ordering.</p>
+        </section>
+
+        <section class="search-section">
+          <form class="search-form">
+            <label for="search" class="sr-only">Search for food</label>
+            <input
+              type="text"
+              id="search"
+              class="search-input"
+              placeholder="Search dishes"
+            />
+          </form>
+        </section>
+
+        <section class="categories-section">
+          <div class="category-list">
+            <button class="category-btn active">All</button>
+            <button class="category-btn">Pizza</button>
+            <button class="category-btn">Burger</button>
+            <button class="category-btn">Salad</button>
+            <button class="category-btn">Dessert</button>
+          </div>
+        </section>
+
+        <section class="promo-card">
+          <div class="promo-text">
+            <p class="promo-label">Special Offer</p>
+            <h3>Get 20% off your first order</h3>
+            <p>Use code <strong>FIRST20</strong> at checkout.</p>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Primary">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">Menu</a>
+        <a href="#" class="nav-link">Cart</a>
+        <a href="#" class="nav-link">Profile</a>
+      </nav>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
