@@ -294,23 +294,39 @@ body {
 }
 
 .add-to-cart-btn {
-    display: inline-block;
-    margin-top: 0.75rem;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 0.7rem 0.9rem;
-    background: var(--accent);
-    color: #fff;
-    font: inherit;
-    font-weight: 600;
-    cursor: pointer;
+  display: inline-block;
+  margin-top: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .add-to-cart-btn:hover {
-    opacity: 0.95;
+  opacity: 0.95;
 }
 
 .add-to-cart-btn:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.cart-summary-text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
 }

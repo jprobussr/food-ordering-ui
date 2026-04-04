@@ -5,6 +5,19 @@ const savedTheme = localStorage.getItem('theme');
 const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 const cart = [];
 
+const cartCount = document.getElementById('cartCount');
+const cartTotal = document.getElementById('cartTotal');
+
+const updateCartSummary = () => {
+  cartCount.textContent = cart.length;
+
+  const total = cart.reduce((sum, item) => {
+    return sum + item.price;
+  }, 0);
+
+  cartTotal.textContent = total.toFixed(2);
+};
+
 addToCartButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const itemName = button.dataset.name;
@@ -16,7 +29,7 @@ addToCartButtons.forEach((button) => {
     };
 
     cart.push(item);
-    console.log(cart);
+    updateCartSummary()
   });
 });
 
