@@ -2,7 +2,6 @@ const favoriteButtons = document.querySelectorAll('.favorite-btn');
 const themeToggle = document.querySelector('.theme-toggle');
 const savedTheme = localStorage.getItem('theme');
 const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-const cart = [];
 const cartCount = document.getElementById('cartCount');
 const cartTotal = document.getElementById('cartTotal');
 const cartToggleBtn = document.querySelector('.cart-toggle-btn');
@@ -11,6 +10,31 @@ const cartOverlay = document.querySelector('.cart-overlay');
 const closeCartBtn = document.querySelector('.close-cart-btn');
 const cartModalTotal = document.getElementById('cartModalTotal');
 const cartItemsContainer = document.querySelector('.cart-items');
+const homeView = document.querySelector('.home-view');
+const profileView = document.querySelector('.profile-view');
+const homeNavBtn = document.querySelector('.home-nav-btn');
+const profileNavBtn = document.querySelector('.profile-nav-btn');
+
+const cart = [];
+
+const showHomeView = () => {
+  homeView.classList.remove('hidden');
+  profileView.classList.add('hidden');
+
+  homeNavBtn.classList.add('active');
+  profileNavBtn.classList.remove('active');
+}
+
+const showProfileView = () => {
+  homeView.classList.add('hidden');
+  profileView.classList.remove('hidden');
+
+  profileNavBtn.classList.add('active');
+  homeNavBtn.classList.remove('active');
+}
+
+homeNavBtn.addEventListener('click', showHomeView);
+profileNavBtn.addEventListener('click', showProfileView);
 
 const renderCartItems = () => {
   if (cart.length === 0) {
@@ -114,3 +138,5 @@ favoriteButtons.forEach((button) => {
     button.classList.toggle('active');
   });
 });
+
+showHomeView();
