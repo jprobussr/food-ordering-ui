@@ -18,142 +18,165 @@
       </header>
 
       <main class="main-content">
-        <section class="hero-section">
-          <h2>Find Your Favorite Food</h2>
-          <p>Fresh meals, fast delivery, and simple ordering.</p>
-        </section>
-
-        <section class="search-section">
-          <form class="search-form">
-            <label for="search" class="sr-only">Search for food</label>
-            <input
-              type="text"
-              id="search"
-              class="search-input"
-              placeholder="Search dishes"
-            />
-          </form>
-        </section>
-
-        <section class="categories-section">
-          <div class="category-list">
-            <button class="category-btn active">All</button>
-            <button class="category-btn">Pizza</button>
-            <button class="category-btn">Burger</button>
-            <button class="category-btn">Salad</button>
-            <button class="category-btn">Dessert</button>
-          </div>
-        </section>
-
-        <section class="promo-card">
-          <div class="promo-text">
-            <p class="promo-label">Special Offer</p>
-            <h3>Get 20% off your first order</h3>
-            <p>Use code <strong>FIRST20</strong> at checkout.</p>
-          </div>
-        </section>
-
-        <section class="dishes-section">
-          <div class="section-header">
-            <h2>Popular Dishes</h2>
-            <a href="#">See All</a>
-          </div>
-
-          <div class="dishes-grid">
-            <article class="dish-card">
-              <button
-                class="favorite-btn"
-                aria-label="Add Classic Burger to favorites"
-              >
-                ♡
-              </button>
-              <img
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
-                alt="Burger"
+        <section class="home-view">
+          <section class="hero-section">
+            <h2>Find Your Favorite Food</h2>
+            <p>Fresh meals, fast delivery, and simple ordering.</p>
+          </section>
+          <section class="search-section">
+            <form class="search-form">
+              <label for="search" class="sr-only">Search for food</label>
+              <input
+                type="text"
+                id="search"
+                class="search-input"
+                placeholder="Search dishes"
               />
-              <div class="dish-info">
-                <h3>Classic Burger</h3>
-                <p>250 kcal</p>
-                <span class="price">$8.99</span>
+            </form>
+          </section>
+          <section class="categories-section">
+            <div class="category-list">
+              <button class="category-btn active">All</button>
+              <button class="category-btn">Pizza</button>
+              <button class="category-btn">Burger</button>
+              <button class="category-btn">Salad</button>
+              <button class="category-btn">Dessert</button>
+            </div>
+          </section>
+          <section class="promo-card">
+            <div class="promo-text">
+              <p class="promo-label">Special Offer</p>
+              <h3>Get 20% off your first order</h3>
+              <p>Use code <strong>FIRST20</strong> at checkout.</p>
+            </div>
+          </section>
+          <section class="dishes-section">
+            <div class="section-header">
+              <h2>Popular Dishes</h2>
+              <a href="#">See All</a>
+            </div>
+            <div class="dishes-grid">
+              <article class="dish-card">
                 <button
-                  class="add-to-cart-btn"
-                  data-name="Classic Burger"
-                  data-price="8.99"
+                  class="favorite-btn"
+                  aria-label="Add Classic Burger to favorites"
                 >
-                  Add to Cart
+                  ♡
                 </button>
-              </div>
-            </article>
+                <img
+                  src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+                  alt="Burger"
+                />
+                <div class="dish-info">
+                  <h3>Classic Burger</h3>
+                  <p>250 kcal</p>
+                  <span class="price">$8.99</span>
+                  <button
+                    class="add-to-cart-btn"
+                    data-name="Classic Burger"
+                    data-price="8.99"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </article>
+              <article class="dish-card">
+                <button
+                  class="favorite-btn"
+                  aria-label="Add Cheese Pizza to favorites"
+                >
+                  ♡
+                </button>
+                <img src="./images/cheese-pizza.jpg" alt="Cheese Pizza" />
+                <div class="dish-info">
+                  <h3>Cheese Pizza</h3>
+                  <p>300 kcal</p>
+                  <span class="price">$10.50</span>
+                  <button
+                    class="add-to-cart-btn"
+                    data-name="Cheese Pizza"
+                    data-price="10.50"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </article>
+              <article class="dish-card">
+                <button
+                  class="favorite-btn"
+                  aria-label="Add Chicken Salad to favorites"
+                >
+                  ♡
+                </button>
+                <img
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
+                  alt="Chicken Salad"
+                />
+                <div class="dish-info">
+                  <h3>Chicken Salad</h3>
+                  <p>180 kcal</p>
+                  <span class="price">$7.25</span>
+                  <button
+                    class="add-to-cart-btn"
+                    data-name="Chicken Salad"
+                    data-price="7.25"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
 
-            <article class="dish-card">
-              <button
-                class="favorite-btn"
-                aria-label="Add Cheese Pizza to favorites"
-              >
-                ♡
+        <section class="profile-view">
+          <div class="profile-card">
+            <div class="profile-avatar">JP</div>
+
+            <h2 class="profile-name">John Probus</h2>
+            <p class="profile-email">john@mail.com</p>
+            <p class="profile-bio">
+              Front-end developer focused on building clean, responsive, and
+              interactive web interfaces.
+            </p>
+
+            <div class="profile-stats">
+              <article class="profile-stat">
+                <h3>12</h3>
+                <p>Orders</p>
+              </article>
+              <article class="profile-stat">
+                <h3>2026</h3>
+                <p>Member Since</p>
+              </article>
+            </div>
+
+            <div class="profile-actions">
+              <button type="button" class="profile-action-btn">
+                Edit Profile
               </button>
-
-              <img src="./images/cheese-pizza.jpg" alt="Cheese Pizza" />
-
-              <div class="dish-info">
-                <h3>Cheese Pizza</h3>
-                <p>300 kcal</p>
-                <span class="price">$10.50</span>
-                <button
-                  class="add-to-cart-btn"
-                  data-name="Cheese Pizza"
-                  data-price="10.50"
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </article>
-
-            <article class="dish-card">
-              <button
-                class="favorite-btn"
-                aria-label="Add Chicken Salad to favorites"
-              >
-                ♡
+              <button type="button" class="profile-action-btn secondary">
+                Log Out
               </button>
-
-              <img
-                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
-                alt="Chicken Salad"
-              />
-
-              <div class="dish-info">
-                <h3>Chicken Salad</h3>
-                <p>180 kcal</p>
-                <span class="price">$7.25</span>
-                <button
-                  class="add-to-cart-btn"
-                  data-name="Chicken Salad"
-                  data-price="7.25"
-                >
-                  Add to Cart
-                </button>
-              </div>
-            </article>
+            </div>
           </div>
         </section>
       </main>
 
-
       <section class="cart-summary">
         <p class="cart-summary-text">
-            Cart: <span id="cartCount">0</span> items
+          Cart: <span id="cartCount">0</span> items
         </p>
         <p class="cart-summary-text">
-            Total: $<span id="cartTotal">0.00</span>
+          Total: $<span id="cartTotal">0.00</span>
         </p>
       </section>
 
       <nav class="bottom-nav" aria-label="Primary">
-        <a href="#" class="nav-link active">Home</a>
+        <button class="nav-link home-nav-btn active" type="button">Home</button>
         <a href="#" class="nav-link">Menu</a>
         <button class="nav-link cart-toggle-btn" type="button">Cart</button>
-        <a href="#" class="nav-link">Profile</a>
+        <button class="nav-link profile-nav-btn" type="button">Profile</button>
       </nav>
 
       <div class="cart-modal hidden">
@@ -162,7 +185,13 @@
         <section class="cart-panel" aria-labelledby="cartTitle">
           <div class="cart-panel-header">
             <h2 id="cartTitle">Your Cart</h2>
-            <button class="close-cart-btn" type="button" aria-label="Close Cart">✕</button>
+            <button
+              class="close-cart-btn"
+              type="button"
+              aria-label="Close Cart"
+            >
+              ✕
+            </button>
           </div>
 
           <div class="cart-items">
