@@ -8,6 +8,24 @@ const cart = [];
 const cartCount = document.getElementById('cartCount');
 const cartTotal = document.getElementById('cartTotal');
 
+const cartToggleBtn = document.querySelector('.cart-toggle-btn');
+const cartModal = document.querySelector('.cart-modal');
+const cartOverlay = document.querySelector('.cart-overlay');
+const closeCartBtn = document.querySelector('.close-cart-btn');
+const cartModalTotal = document.getElementById('cartModalTotal');
+
+cartOverlay.addEventListener('click', () => {
+  cartModal.classList.add('hidden');
+});
+
+closeCartBtn.addEventListener('click', () => {
+  cartModal.classList.add('hidden');
+});
+
+cartToggleBtn.addEventListener('click', () => {
+  cartModal.classList.remove('hidden');
+});
+
 const updateCartSummary = () => {
   cartCount.textContent = cart.length;
 
@@ -16,6 +34,7 @@ const updateCartSummary = () => {
   }, 0);
 
   cartTotal.textContent = total.toFixed(2);
+  cartModalTotal.textContent = total.toFixed(2);
 };
 
 addToCartButtons.forEach((button) => {
@@ -29,7 +48,7 @@ addToCartButtons.forEach((button) => {
     };
 
     cart.push(item);
-    updateCartSummary()
+    updateCartSummary();
   });
 });
 
