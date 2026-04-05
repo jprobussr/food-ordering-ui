@@ -13,6 +13,30 @@ const cartModal = document.querySelector('.cart-modal');
 const cartOverlay = document.querySelector('.cart-overlay');
 const closeCartBtn = document.querySelector('.close-cart-btn');
 const cartModalTotal = document.getElementById('cartModalTotal');
+const cartItemsContainer = document.querySelector('.cart-items');
+
+const renderCartItems = () => {
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML =
+      '<p class="empty-cart-message">Your cart is empty.</p>';
+    return;
+  }
+
+  const cartItemsHTML = cart
+    .map((item) => {
+      return `
+      <article class="cart-item">
+        <div>
+          <h3 class="cart-item-title">${item.name}</h3>
+          <p class="cart-item-price">${item.price.toFixed(2)}</p>
+        </div>
+      </article>
+    `;
+    })
+    .join('');
+
+    cartItemsContainer.innerHTML = cartItemsHTML;
+};
 
 cartOverlay.addEventListener('click', () => {
   cartModal.classList.add('hidden');
@@ -35,6 +59,8 @@ const updateCartSummary = () => {
 
   cartTotal.textContent = total.toFixed(2);
   cartModalTotal.textContent = total.toFixed(2);
+
+  renderCartItems();
 };
 
 addToCartButtons.forEach((button) => {
