@@ -424,3 +424,17 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+.remove-item-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.remove-item-btn:hover {
+  opacity: 0.9;
+}

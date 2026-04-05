@@ -1,13 +1,10 @@
 const favoriteButtons = document.querySelectorAll('.favorite-btn');
 const themeToggle = document.querySelector('.theme-toggle');
 const savedTheme = localStorage.getItem('theme');
-
 const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 const cart = [];
-
 const cartCount = document.getElementById('cartCount');
 const cartTotal = document.getElementById('cartTotal');
-
 const cartToggleBtn = document.querySelector('.cart-toggle-btn');
 const cartModal = document.querySelector('.cart-modal');
 const cartOverlay = document.querySelector('.cart-overlay');
@@ -23,19 +20,32 @@ const renderCartItems = () => {
   }
 
   const cartItemsHTML = cart
-    .map((item) => {
+    .map((item, index) => {
       return `
       <article class="cart-item">
         <div>
           <h3 class="cart-item-title">${item.name}</h3>
-          <p class="cart-item-price">${item.price.toFixed(2)}</p>
+          <p class="cart-item-price">$${item.price.toFixed(2)}</p>
         </div>
+
+        <button class="remove-item-btn" data-index="${index}" type="button">X</button>
       </article>
     `;
     })
     .join('');
 
-    cartItemsContainer.innerHTML = cartItemsHTML;
+  cartItemsContainer.innerHTML = cartItemsHTML;
+
+  const removeItemButtons = document.querySelectorAll('.remove-item-btn');
+
+  removeItemButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const itemIndex = Number(button.dataset.index);
+
+      cart.splice(itemIndex, 1);
+      updateCartSummary();
+    });
+  });
 };
 
 cartOverlay.addEventListener('click', () => {
