@@ -109,12 +109,23 @@ body {
 }
 
 .nav-link {
-  text-decoration: none;
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
   font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
 }
 
 .nav-link.active {
   color: var(--accent);
+  background: none;
+}
+
+.nav-link:hover {
+  color: var(--text);
 }
 
 .sr-only {
